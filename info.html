@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title><script language="JavaScript1.1">
+<!--
+
+/*
+JavaScript Image slideshow:
+By  (www.wsabstract.com)
+Over 200+ free JavaScript here!
+*/
+
+var slideimages=new Array()
+var slidelinks=new Array()
+function slideshowimages(){
+for (i=0;i<slideshowimages.arguments.length;i++){
+slideimages[i]=new Image()
+slideimages[i].src=slideshowimages.arguments[i]
+}
+}
+
+function slideshowlinks(){
+for (i=0;i<slideshowlinks.arguments.length;i++)
+slidelinks[i]=slideshowlinks.arguments[i]
+}
+
+function gotoshow(){
+if (!window.winslide||winslide.closed)
+winslide=window.open(slidelinks[whichlink])
+else
+winslide.location=slidelinks[whichlink]
+winslide.focus()
+}
+
+//-->
+</script>
+
+
+
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 18px;
+	color: #900909;
+}
+.style2 {
+	font-size: 12px;
+	color: #990000;
+}
+.style3 {font-size: 12px; color: #990000; font-weight: bold; }
+-->
+</style></head>
+
+<body bgcolor="#CCCCCC">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="center">
+  <script>
+<!--
+
+//configure the paths of the images, plus corresponding target links
+slideshowimages("human1.jpg","car1.jpg","land1.jpg","universe1.jpg","fish1.jpg","bird1.jpg")
+
+
+//configure the speed of the slideshow, in miliseconds
+var slideshowspeed=3000
+
+var whichlink=0
+var whichimage=0
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=slideimages[whichimage].src
+whichlink=whichimage
+if (whichimage<slideimages.length-1)
+whichimage++
+else
+whichimage=0
+setTimeout("slideit()",slideshowspeed)
+}
+slideit()
+
+//-->
+    </script>
+</p>
+<div id="Layer4" style="position:absolute; left:380px; top:16px; width:600px; height:15px; y-index:86">
+  <div align="center"><strong><span class="style1"><marquee>
+  AR CREATIVE TECHNOLOGY   ||| ARC FASHION   ||| BELADINGALU PUBLICATION
+  </marquee></span></strong></div>
+</div> 
+<p align="center">&nbsp;</p>
+<div id="Layer81" style="position:absolute; left:372px; top:59px; width:606px; height:314px; z-index:86">
+  <div align="center"><img src="ct1.jpg" width="607" height="352" /></div>
+</div>
+</body>
+
+</html>
